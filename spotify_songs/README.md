@@ -67,7 +67,7 @@ The `spotify_songs_dataset` table includes the following columns:
 ## How to Use
 1. Make sure you are using the database `new_schema`:
 
-```sql
+
 USE new_schema;
 2. Execute the script in a SQL client (MySQL, MariaDB, etc.) to see the results of each query.
 3. Modify the queries to explore additional insights or answer specific questions about artists, songs, or labels.
@@ -77,3 +77,4 @@ USE new_schema;
 This project is intended as a junior-level portfolio piece demonstrating SQL data analysis skills.
 
 Further improvements could include creating visualizations, combining multiple metrics into dashboards, or integrating the analysis with Python or R for additional exploration.
+```sql
