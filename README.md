@@ -14,25 +14,29 @@ Welcome to my data wrangling portfolio! This repository showcases my ability to 
   - Found top songs per genre and self-produced tracks.
   - Explored genre diversity among artists.
 
-### 2. [Pandas Project 1: Title]
-- **Description:** Used pandas to clean and analyze [dataset description].
-- **Key Skills:** DataFrame operations, `groupby`, filtering, aggregations, visualization.
-- **Highlights:** [Briefly mention 1–2 interesting results or visualizations].
+### 2. Movies Dataset Analysis 1
+- **Description:** Used pandas to clean and analyze multiple movie datasets, including movie metadata and user ratings, to create a unified dataset ready for exploration.
+- **Key Skills:** DataFrame operations, `groupby`, filtering, aggregations, merging datasets, handling missing values, text cleaning with regex.
+- **Highlights:** Cleaned movie titles by removing year parentheses and merged datasets on `movieId` and `title`. Identified the top-rated movies and explored rating trends by genre.
 
-### 3. [Pandas Project 2: Title]
-- **Description:** Applied data wrangling techniques to [dataset description].
-- **Key Skills:** Handling missing data, reshaping, merging datasets.
-- **Highlights:** [Key insights or outputs].
 
-### 4. [Pandas Project 3: Title]
-- **Description:** Focused on [dataset description] to extract meaningful insights.
-- **Key Skills:** Advanced pandas operations, string manipulation, conditional transformations.
-- **Highlights:** [Key result or takeaway].
+### 3. Movies Dataset Analysis 2
+- **Description:** Applied data wrangling techniques to Netflix movie and user rating datasets to uncover trends in ratings and user behavior.
+- **Key Skills:** Handling missing data, reshaping DataFrames, merging datasets, grouping, filtering, calculating aggregates, and visualizing results.
+- **Highlights:** Merged movie and rating datasets, identified top-rated movies and most active/generous users, analyzed rating trends by release decade, and visualized key insights with histograms and bar charts.
 
-### 5. [Pandas Project 4: Title]
-- **Description:** Conducted exploratory data analysis and preprocessing for [dataset description].
-- **Key Skills:** Aggregations, pivot tables, date/time handling.
-- **Highlights:** [Key result or takeaway].
+
+### 4. Treasury API to Pandas Dataset Analysis
+- **Description:** Focused on U.S. Treasury operating cash balance data to extract trends in account activity over time.
+- **Key Skills:** Advanced pandas operations, API data extraction, time series manipulation, string handling, and conditional transformations.
+- **Highlights:** Fetched and cleaned Treasury data via the Fiscal Data API, calculated daily and weekly balance changes, visualized trends by account type, and prepared a ready-to-use dataset for further analysis.
+
+
+### 5. Sales Analysis
+- **Description:** Conducted exploratory data analysis and preprocessing on a Kaggle JSON sales dataset to uncover regional and product-level trends.
+- **Key Skills:** Aggregations, pivot tables, date/time handling, data cleaning, and visualization.
+- **Highlights:** Identified top-performing states, regions, and products; visualized sales trends with plots; and exported a cleaned dataset for reporting and further analysis.
+
 
 ---
 
