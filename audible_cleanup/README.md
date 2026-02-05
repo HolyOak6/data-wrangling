@@ -12,12 +12,6 @@ This project demonstrates cleaning and merging two messy CSV datasets (users, sa
 
 \- `cleaning\_notebook.ipynb` — Jupyter notebook with step-by-step cleaning and merging
 
-\- `merged\_sales\_users.csv` — Cleaned and merged sales + users data
-
-\- `merged\_activity\_users.csv` — Cleaned and merged activity + users data
-
-
-
 \## Skills Demonstrated
 
 \- Handling missing values and duplicates
