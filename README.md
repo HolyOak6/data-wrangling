@@ -37,6 +37,11 @@ Welcome to my data wrangling portfolio! This repository showcases my ability to 
 - **Key Skills:** Aggregations, pivot tables, date/time handling, data cleaning, and visualization.
 - **Highlights:** Identified top-performing states, regions, and products; visualized sales trends with plots; and exported a cleaned dataset for reporting and further analysis.
 
+### 6. Audible Cleanup
+- **Description:** Performed end-to-end data cleaning and merging on messy Audible-style datasets, including users, sales, and listening activity. Standardized inconsistent strings, dates, and currency fields to produce analysis-ready tables.
+- **Key Skills:** Data cleaning, handling missing values, parsing multiple date formats, string manipulation, numeric/currency conversion, relational merges, and documentation of workflow.
+- **Highlights:** Cleaned and merged user, sales, and activity datasets; filled missing values thoughtfully; standardized book titles and dates; prepared CSV outputs ready for SQL queries and further analysis; and documented all steps in a polished Jupyter notebook.
+
 
 ---
 
