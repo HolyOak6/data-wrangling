@@ -1,206 +1,206 @@
-**# Ecommerce Pricing and Revenue Analysis (SQL)**
+\# Ecommerce Pricing and Revenue Analysis (SQL)
 
 
 
-**## Project Objective**
+\## Project Objective
 
 
 
-**This project analyzes a 36-month ecommerce dataset to understand how pricing strategy, discount levels, and promotional events impact revenue and sales volume.**
+This project analyzes a 36-month ecommerce dataset to understand how pricing strategy, discount levels, and promotional events impact revenue and sales volume.
 
 
 
-**The goal is to identify patterns that help businesses optimize discount strategies, improve revenue performance, and understand how promotions influence customer purchasing behavior.**
+The goal is to identify patterns that help businesses optimize discount strategies, improve revenue performance, and understand how promotions influence customer purchasing behavior.
 
 
 
-**\*\*Key business questions:\*\***
+\*\*Key business questions:\*\*
 
 
 
-**- How do discounts affect revenue and units sold?**  
+\- How do discounts affect revenue and units sold?  
 
-**- Do promotional events increase performance?**  
+\- Do promotional events increase performance?  
 
-**- What discount levels maximize revenue?**  
+\- What discount levels maximize revenue?  
 
-**- How does pricing strategy vary across product categories and events?**  
+\- How does pricing strategy vary across product categories and events?  
 
 
 
-**---**
+---
 
 
 
-**## Dataset Description**
+\## Dataset Description
 
 
 
-**The dataset contains ecommerce transaction data with pricing, customer, and sales performance information.**
+The dataset contains ecommerce transaction data with pricing, customer, and sales performance information.
 
 
 
-**\*\*Key columns used:\*\***
+\*\*Key columns used:\*\*
 
 
 
-**- `order\_date` — transaction date**  
+\- `order\_date` — transaction date  
 
-**- `category` — product category**  
+\- `category` — product category  
 
-**- `base\_price` — original product price**  
+\- `base\_price` — original product price  
 
-**- `discount\_percent` — discount applied to product**  
+\- `discount\_percent` — discount applied to product  
 
-**- `final\_price` — price after discount**  
+\- `final\_price` — price after discount  
 
-**- `units\_sold` — quantity sold**  
+\- `units\_sold` — quantity sold  
 
-**- `revenue` — total revenue generated**  
+\- `revenue` — total revenue generated  
 
-**- `sales\_event` — promotion type (festival or normal)**  
+\- `sales\_event` — promotion type (festival or normal)  
 
-**- `customer\_gender / customer\_age` — customer demographics**  
+\- `customer\_gender / customer\_age` — customer demographics  
 
-**- `competition\_intensity / inventory\_pressure` — market conditions**  
+\- `competition\_intensity / inventory\_pressure` — market conditions  
 
 
 
-**---**
+---
 
 
 
-**## Data Validation and Cleaning**
+\## Data Validation and Cleaning
 
 
 
-**Before analysis, the dataset was inspected and validated:**
+Before analysis, the dataset was inspected and validated:
 
 
 
-**- Checked for duplicate records using aggregation queries (none found)**  
+\- Checked for duplicate records using aggregation queries (none found)  
 
-**- Checked for missing values in key columns**  
+\- Checked for missing values in key columns  
 
-**- Inspected table structure using PRAGMA**  
+\- Inspected table structure using PRAGMA  
 
-**- Explored data distributions and summary metrics**  
+\- Explored data distributions and summary metrics  
 
-**- Verified numeric fields for aggregation consistency**  
+\- Verified numeric fields for aggregation consistency  
 
 
 
-**This ensured reliable results before performing business analysis.**
+This ensured reliable results before performing business analysis.
 
 
 
-**---**
+---
 
 
 
-**## Analysis Approach**
+\## Analysis Approach
 
 
 
-**The analysis focused on understanding how pricing and discounts influence revenue performance.**
+The analysis focused on understanding how pricing and discounts influence revenue performance.
 
 
 
-**\*\*Key methods:\*\***
+\*\*Key methods:\*\*
 
 
 
-**- Grouped discount percentages into buckets:**  
+\- Grouped discount percentages into buckets:  
 
-  **- No discount**  
+&nbsp; - No discount  
 
-  **- Low discount (0–10%)**  
+&nbsp; - Low discount (0–10%)  
 
-  **- Medium discount (10–30%)**  
+&nbsp; - Medium discount (10–30%)  
 
-  **- High discount (30%+)**  
+&nbsp; - High discount (30%+)  
 
-**- Compared average revenue and units sold across discount groups**  
+\- Compared average revenue and units sold across discount groups  
 
-**- Compared performance across sales events (festival vs normal)**  
+\- Compared performance across sales events (festival vs normal)  
 
-**- Examined relationship between base price and discount level**  
+\- Examined relationship between base price and discount level  
 
-**- Calculated revenue per unit sold**  
+\- Calculated revenue per unit sold  
 
-**- Compared performance across product categories and promotion types**  
+\- Compared performance across product categories and promotion types  
 
 
 
-**SQL aggregations (`GROUP BY`, `CASE`, `AVG`) were used to identify patterns.**
+SQL aggregations (`GROUP BY`, `CASE`, `AVG`) were used to identify patterns.
 
 
 
-**---**
+---
 
 
 
-**## Key Findings**
+\## Key Findings
 
 
 
-**- High discount levels generated the highest average revenue and units sold overall**  
+\- High discount levels generated the highest average revenue and units sold overall  
 
-**- Festival sales events had higher average discounts and higher revenue than normal sales periods**  
+\- Festival sales events had higher average discounts and higher revenue than normal sales periods  
 
-**- Lower-priced products tended to receive higher discounts**  
+\- Lower-priced products tended to receive higher discounts  
 
-**- During normal sales periods, medium discounts produced the highest revenue**  
+\- During normal sales periods, medium discounts produced the highest revenue  
 
-**- High discounts increased sales volume but did not always maximize revenue outside promotional events**  
+\- High discounts increased sales volume but did not always maximize revenue outside promotional events  
 
-**- Revenue performance varies depending on both discount level and event type**  
+\- Revenue performance varies depending on both discount level and event type  
 
 
 
-**---**
+---
 
 
 
-**## Business Insights**
+\## Business Insights
 
 
 
-**- Promotional events benefit from aggressive discount strategies due to increased customer demand**  
+\- Promotional events benefit from aggressive discount strategies due to increased customer demand  
 
-**- Outside major promotions, moderate discounts may provide better revenue optimization**  
+\- Outside major promotions, moderate discounts may provide better revenue optimization  
 
-**- Pricing strategy should vary based on product base price and sales context**  
+\- Pricing strategy should vary based on product base price and sales context  
 
-**- Businesses can increase revenue by aligning discount levels with promotional timing**  
+\- Businesses can increase revenue by aligning discount levels with promotional timing  
 
 
 
-**---**
+---
 
 
 
-**## Tools Used**
+\## Tools Used
 
 
 
-**- SQL (SQLite)**  
+\- SQL (SQLite)  
 
-**- SQLite DB Browser**  
+\- SQLite DB Browser  
 
 
 
-**---**
+---
 
 
 
-**## Project Files**
+\## Project Files
 
 
 
-**- `analysis.sql` — SQL queries used for data validation and analysis**  
+\- `analysis.sql` — SQL queries used for data validation and analysis  
 
-**- Dataset file used for analysis**  
+\- Dataset file used for analysis  
 
-**- README documentation explaining process and findings**  
+\- README documentation explaining process and findings  
 
