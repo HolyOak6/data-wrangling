@@ -10,7 +10,15 @@ This project analyzes a 36-month ecommerce dataset to understand how pricing str
 
 
 
-The goal is to identify patterns that help businesses optimize discount strategies, improve revenue performance, and understand how promotions influence customer purchasing behavior.
+The goal is to identify patterns that help businesses:
+
+
+
+\- Optimize discount strategies  
+
+\- Improve revenue performance  
+
+\- Understand how promotions influence customer purchasing behavior  
 
 
 
