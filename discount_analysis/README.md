@@ -52,56 +52,102 @@ This ensured reliable results before performing business analysis.
 
 ---
 
+# E-Commerce Discount Strategy Analysis
+
+## Project Overview
+
+This project analyzes how discount levels influence revenue, pricing, and sales volume in an e-commerce dataset.  
+The goal was to determine whether deeper discounts consistently increase revenue or whether a balanced pricing strategy produces better outcomes.
+
+The analysis focuses on identifying the relationship between **discount levels, unit sales, pricing, and total revenue**, and translating those findings into actionable business insights.
+
+An interactive visualization dashboard was built to present these results.
+
+---
+
+## Interactive Dashboard
+
+An interactive dashboard was created using Tableau to visualize the relationships between discount levels, revenue, pricing, and sales volume.
+
+The dashboard includes:
+
+- Revenue trends over time by discount tier
+- Revenue performance across discount levels
+- Order volume and units sold by discount tier
+- Average final price comparison across discount groups
+
+**View the interactive dashboard:**  
+https://public.tableau.com/views/discount_analysis/Dashboard1?:language=enUS&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+---
+
 ## Analysis Approach
 
 The analysis focused on understanding how pricing and discounts influence revenue performance.
 
-**Key methods:**
+### Key methods
 
-- Grouped discount percentages into buckets:  
-  - No discount  
-  - Low discount (0–10%)  
-  - Medium discount (10–30%)  
-  - High discount (30%+)  
-- Compared average revenue and units sold across discount groups  
-- Compared performance across sales events (festival vs normal)  
-- Examined relationship between base price and discount level  
-- Calculated revenue per unit sold  
-- Compared performance across product categories and promotion types  
+- Grouped discount percentages into buckets:
+  - No discount
+  - Low discount (0–10%)
+  - Medium discount (10–30%)
+  - High discount (30%+)
 
-SQL aggregations (`GROUP BY`, `CASE`, `AVG`) were used to identify patterns.
+- Compared revenue performance across discount groups
+- Analyzed order volume and units sold across discount tiers
+- Compared performance across sales events (festival vs normal)
+- Examined the relationship between base price and discount level
+- Calculated revenue per unit sold
+- Evaluated differences across product categories and promotional types
+
+SQL aggregations (`GROUP BY`, `CASE`, `AVG`, `COUNT`) were used to identify patterns and summarize performance across these dimensions.
 
 ---
 
 ## Key Findings
 
-- High discount levels generated the highest average revenue and units sold overall  
-- Festival sales events had higher average discounts and higher revenue than normal sales periods  
-- Lower-priced products tended to receive higher discounts  
-- During normal sales periods, medium discounts produced the highest revenue  
-- High discounts increased sales volume but did not always maximize revenue outside promotional events  
-- Revenue performance varies depending on both discount level and event type  
+- Higher discount levels generated the **largest sales volume (units sold)**.
+- Lower discount tiers maintained **higher average final prices per unit**.
+- **Mid-range discount tiers produced the highest overall revenue**, suggesting an optimal balance between pricing and sales volume.
+- Festival sales events generally involved **higher discount levels and increased purchasing activity**.
+- Deep discounts increased units sold but did **not always maximize total revenue outside major promotional periods**.
+
+These results suggest that discounting strategies must balance **price reduction and demand stimulation** to achieve optimal financial outcomes.
 
 ---
 
 ## Business Insights
 
-- Promotional events benefit from aggressive discount strategies due to increased customer demand  
-- Outside major promotions, moderate discounts may provide better revenue optimization  
-- Pricing strategy should vary based on product base price and sales context  
-- Businesses can increase revenue by aligning discount levels with promotional timing  
+- Moderate discount levels appear to provide the **best balance between price and sales volume**, producing the strongest revenue performance.
+- Aggressive discounting significantly increases purchase volume but can reduce total revenue due to lower per-unit pricing.
+- Promotional events can support **deeper discounts** because customer demand is already elevated during those periods.
+- Outside major promotional periods, **moderate discounting strategies may be more effective for revenue optimization**.
+- Higher discount tiers may still be useful for **inventory reduction or clearance campaigns**, where moving product volume is prioritized over maximizing revenue per unit.
+
+---
+
+## Data Limitations
+
+The dataset contains several structural limitations that affect certain types of analysis:
+
+- Order dates appear only on the **last day of each month**, limiting detailed time-series analysis.
+- Each month contains a **fixed number of orders**, which does not reflect real-world transaction variability.
+
+While these constraints limit some analyses (such as daily sales patterns or realistic growth modeling), the dataset still supports meaningful exploration of how **discount strategies influence pricing, revenue, and sales volume**.
 
 ---
 
 ## Tools Used
 
-- SQL (SQLite)  
-- SQLite DB Browser  
+- SQL (SQLite)
+- DB Browser for SQLite
+- Tableau Public (data visualization)
 
 ---
 
 ## Project Files
 
-- `analysis.sql` — SQL queries used for data validation and analysis  
-- Dataset file used for analysis  
-- README documentation explaining process and findings  
+- `analysis.sql` — SQL queries used for data analysis
+- Dataset used for analysis
+- Tableau dashboard visualization
+- README documentation explaining the analysis process and findings
