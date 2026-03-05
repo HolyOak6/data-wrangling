@@ -42,6 +42,15 @@ Welcome to my data wrangling portfolio! This repository showcases my ability to 
 - **Key Skills:** Data cleaning, handling missing values, parsing multiple date formats, string manipulation, numeric/currency conversion, relational merges, and documentation of workflow.
 - **Highlights:** Cleaned and merged user, sales, and activity datasets; filled missing values thoughtfully; standardized book titles and dates; prepared CSV outputs ready for SQL queries and further analysis; and documented all steps in a polished Jupyter notebook.
 
+### 7. E-Commerce Discount Strategy Analysis
+- **Description:** Investigated how discount levels influence revenue, pricing, and sales volume in an e-commerce dataset. The project combined SQL analysis with an interactive Tableau dashboard to evaluate the trade-offs between higher discounts and revenue performance.
+- **Key Skills:** SQL aggregations, `CASE` statements for discount binning, grouping and summarization, business metric analysis, and data visualization with Tableau.
+- **Highlights:**
+  - Grouped discount percentages into tiers (No, Low, Medium, High) to evaluate pricing strategy.
+  - Compared revenue, order count, units sold, and average final price across discount levels.
+  - Identified a trade-off where higher discounts increased sales volume but reduced per-unit price.
+  - Found that **moderate discount levels produced the highest overall revenue**, suggesting an optimal balance between price and demand.
+  - Built an interactive Tableau dashboard to visualize revenue trends and support business recommendations.
 
 ---
 
