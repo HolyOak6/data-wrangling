@@ -1,0 +1,23 @@
+user_id,Name,Join_Date,Renewal_Date,State,email
+U001,  John Doe  ,2023-01-15,2024-01-15,NY,john@email.com
+U002, Jane smith ,2023-02-05,2024-02-05,NY,jane.smith@email.com
+U003,Bob Lee,2023-03-01,2024-03-01,CA,bob@email.com
+U004, Alice Wong ,2023-03-12,2024-03-12,CA,alice@email.com
+U005, Mike Brown ,2023-04-13,2024-04-13,TX,mike@email.com
+U006, Sarah Kim ,2023-06-07,2024-06-07,CA,sarah@email.com
+U007, Tom White ,2023-07-01,2024-07-01,FL,tom@email.com
+U008, Emily Davis ,2023-08-03,2024-08-03,FL,emily@email.com
+U009, Chris Green,2023-09-18,2024-09-18,NY,chris@email.com
+U010, Lisa Ray ,2023-10-25,2024-10-25,CA,lisa@email.com
+U011,Mark O'Neil,2023-01-20,2024-01-20,TX,mark@email.com
+U012, Olivia  Bell ,2023-02-14,2024-02-14,CA,olivia@email.com
+U013, James Carter,2023-03-03,2024-03-03,FL,james@email.com
+U014,Anna Lee ,2023-04-10,2024-04-10,NY,anna@email.com
+U015, Peter Hall ,2023-05-05,2024-05-05,TX,peter@email.com
+U016, Laura King ,2023-06-22,2024-06-22,CA,laura@email.com
+U017, Brian Scott ,2023-07-12,2024-07-12,FL,brian@email.com
+U018, Mia Lopez ,2023-08-09,2024-08-09,NY,mia@email.com
+U019, Kevin White ,2023-09-01,2024-09-01,TX,kevin@email.com
+U020, Sophia  Gray,2023-10-02,2024-10-02,CA,sophia@email.com
+U021, Ethan Hall ,2023-11-11,2024-11-11,FL,ethan@email.com
+

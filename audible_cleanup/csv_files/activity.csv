@@ -1,0 +1,25 @@
+activity_id,user_id,Book_Title,Minutes_Listened,Listen_Date,Format
+A001,U001,atomic habits,320,2023-02-01,audio
+A002,U001,Deep Work,210,2023-02-10,audio
+A003,U002,deep work,240,2023-03-05,audio
+A004,U003,the alchemist,180,2023-03-10,audio
+A005,U004,1984,200,2023-04-11,audio
+A006,U004,Animal Farm,150,2023-04-15,audio
+A007,U005,Rich Dad Poor Dad,210,2023-05-21,audio
+A008,U006,thinking fast and slow,190,2023-06-15,audio
+A009,U007,the power of habit,190,2023-07-01,audio
+A010,U008,Thinking Fast and Slow,260,2023-07-16,audio
+A011,U009,the subtle art of not giving a f*ck,260,2023-09-25,audio
+A012,U010,1984,190,2023-10-31,audio
+A013,U011,Atomic Habits,310,2023-01-22,audio
+A014,U012,The Alchemist,175,2023-02-20,audio
+A015,U013,Deep Work,240,2023-03-10,audio
+A016,U014,1984,200,2023-04-12,audio
+A017,U015,Rich Dad Poor Dad,215,2023-05-28,audio
+A018,U016,The Psychology of Money,210,2023-06-25,audio
+A019,U017,The Power of Habit,180,2023-07-15,audio
+A020,U018,Thinking Fast and Slow,250,2023-08-12,audio
+A021,U019,Atomic Habits,300,2023-09-05,audio
+A022,U020,Thinking fast and slow,310,2023-10-05,audio
+A023,U021,The Power of Habit,190,2023-11-15,audio
+
