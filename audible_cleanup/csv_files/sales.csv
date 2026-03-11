@@ -1,0 +1,47 @@
+sale_id,user_id,Sale_Type,Amount,Sale_Date,Book_Title
+S001,U001,subscription,$14.99,2023-01-15,
+S002,U001,book purchase, 12.99 ,02/01/23,atomic habits
+S003,U001,book purchase,13.00,2023-02-10,Deep Work
+S004,U002,subscription,15 USD,2023/02/05,
+S005,U002,book purchase,13.50,03-05-23,deep work
+S006,U002,book purchase, 13.50 ,03/05/23,Deep Work
+S007,U003,subscription,$14.99,2023-03-01,
+S008,U003,book purchase,11.99,,the alchemist
+S009,U004,subscription,14.99,2023-03-12,
+S010,U004,book purchase, 9.99 ,04-10-2023,1984
+S011,U004,book purchase,9.99,04/10/23,1984
+S012,U005,subscription,20.00,2023-04-13,
+S013,U005,book purchase,15 ,05/20/23,Rich dad poor dad
+S014,U006,subscription,$14.99,2023-06-07,
+S015,U006,book purchase,,06/15/23,thinking fast and slow
+S016,U007,subscription,15 USD,2023-07-01,
+S017,U007,book purchase,12.00,07/05/23,The power of habit
+S018,U008,subscription, $15 ,2023-08-03,
+S019,U008,book purchase,18.99,2023/07/15,thinking fast and slow
+S020,U009,subscription,14.99,2023-09-18,
+S021,U009,book purchase,13.99,09/25/23,the subtle art of not giving a f*ck
+S022,U010,subscription,15,2023-10-25,
+S023,U010,book purchase,12.99,10/30/23,1984
+S024,U011,subscription,$14.99,2023-01-20,
+S025,U011,book purchase,13.50,01/22/23,Atomic Habits
+S026,U012,subscription,14.99,2023-02-14,
+S027,U012,book purchase,11.99,02/20/23,The Alchemist
+S028,U013,subscription,$15,2023-03-03,
+S029,U013,book purchase,13.99,03/10/23,Deep Work
+S030,U014,subscription,14.99,2023-04-10,
+S031,U014,book purchase, 10.00 ,04-12-23,1984
+S032,U015,subscription,15,2023-05-05,
+S033,U015,book purchase,15.00,05/10/23,Rich Dad Poor Dad
+S034,U016,subscription,$14.99,2023-06-22,
+S035,U016,book purchase, 16 ,06/25/23,The Psychology of Money
+S036,U017,subscription,15,2023-07-12,
+S037,U017,book purchase,12.00,07/15/23,The Power of Habit
+S038,U018,subscription,$14.99,2023-08-09,
+S039,U018,book purchase,19,08/12/23,Thinking Fast and Slow
+S040,U019,subscription,15 USD,2023-09-01,
+S041,U019,book purchase, 12.99 ,09-05-23,Atomic Habits
+S042,U020,subscription,14.99,2023-10-02,
+S043,U020,book purchase,18.99,10/05/23,Thinking fast and slow
+S044,U021,subscription,15,2023-11-11,
+S045,U021,book purchase,12.00,11/15/23,The Power of Habit
+
