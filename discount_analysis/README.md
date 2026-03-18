@@ -126,17 +126,6 @@ These results suggest that discounting strategies must balance **price reduction
 
 ---
 
-## Data Limitations
-
-The dataset contains several structural limitations that affect certain types of analysis:
-
-- Order dates appear only on the **last day of each month**, limiting detailed time-series analysis.
-- Each month contains a **fixed number of orders**, which does not reflect real-world transaction variability.
-
-While these constraints limit some analyses (such as daily sales patterns or realistic growth modeling), the dataset still supports meaningful exploration of how **discount strategies influence pricing, revenue, and sales volume**.
-
----
-
 ## 🔹 Recommendations
 
 Based on the analysis of discount levels, sales volume, and revenue performance, the following strategies are recommended for e-commerce pricing:
@@ -163,6 +152,17 @@ Based on the analysis of discount levels, sales volume, and revenue performance,
 
 **Summary:**  
  Focus on moderate, data-driven discounting while using deep discounts selectively to drive short-term volume or manage inventory. This approach maximizes revenue potential while maintaining pricing integrity and long-term profitability.
+ 
+---
+
+## Data Limitations
+
+The dataset contains several structural limitations that affect certain types of analysis:
+
+- Order dates appear only on the **last day of each month**, limiting detailed time-series analysis.
+- Each month contains a **fixed number of orders**, which does not reflect real-world transaction variability.
+
+While these constraints limit some analyses (such as daily sales patterns or realistic growth modeling), the dataset still supports meaningful exploration of how **discount strategies influence pricing, revenue, and sales volume**.
 
 ---
 
