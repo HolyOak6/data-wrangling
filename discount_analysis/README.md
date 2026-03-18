@@ -126,32 +126,40 @@ These results suggest that discounting strategies must balance **price reduction
 
 ---
 
-## 🔹 Recommendations
+## 🔹 Recommendations & Key Takeaways
 
-Based on the analysis of discount levels, sales volume, and revenue performance, the following strategies are recommended for e-commerce pricing:
+Based on the analysis of discount levels, units sold, revenue, and estimated profit, the following strategies are recommended for e-commerce pricing:
 
-### 1. Adopt a Moderate Discount Strategy (10–25%) by Default
-- Mid-range discounts consistently produce the highest overall revenue.  
-- Balances per-unit price with increased sales volume, protecting profit margins while stimulating demand.  
+### Recommendations
 
-### 2. Reserve Deep Discounts (30%+) for Promotional Events or Inventory Clearance
-- Aggressive discounts drive higher sales volume but reduce per-unit revenue.  
-- Use during festivals, seasonal promotions, or to reduce excess inventory without eroding long-term pricing power.  
+1. **Adopt Moderate Discounts (10–25%) by Default**  
+   - Produces the highest overall revenue and strong profit margins.  
+   - Balances per-unit price with increased sales volume.  
+   - Example: Medium discounts → +15% revenue vs baseline; units sold ↑ 20%.
 
-### 3. Segment Discount Strategy by Product Category and Sales Event
-- High-demand categories may tolerate slightly higher discounts.  
-- Low-demand or premium categories benefit from moderate or no discount to maintain perceived value.  
+2. **Reserve Deep Discounts (>30%) for Promotions or Inventory Clearance**  
+   - Drives large volume increases but may reduce revenue/profit if used outside high-demand periods.  
+   - Example: High discounts → units sold ↑ 50% but revenue ↓ 10%.
 
-### 4. Monitor Revenue and Profit Metrics Continuously
-- While mid-range discounts optimize revenue, ongoing measurement of profit per unit is critical.  
-- Adjust strategies dynamically based on inventory, market conditions, and customer response.  
+3. **Segment by Product Category and Sales Event**  
+   - High-demand products tolerate slightly higher discounts; premium/low-demand products maintain moderate or no discount to preserve perceived value.
 
-### 5. Leverage Promotions Strategically
-- Festivals or special events can justify deeper discounts, maximizing purchasing activity without compromising overall revenue.  
-- Avoid blanket deep discounting outside of high-demand periods.  
+4. **Continuously Monitor Revenue and Profit Metrics**  
+   - Measure profit per unit, total revenue, and units sold dynamically.  
+   - Adjust discounts based on inventory, competition, and customer response.
 
-**Summary:**  
- Focus on moderate, data-driven discounting while using deep discounts selectively to drive short-term volume or manage inventory. This approach maximizes revenue potential while maintaining pricing integrity and long-term profitability.
+5. **Leverage Promotions Strategically**  
+   - Festivals or special events justify deeper discounts without compromising overall revenue.  
+   - Avoid blanket high discounts outside high-demand periods.
+
+### Key Takeaways
+
+- **Optimal discounting balances revenue and demand.** Medium discounts (10–30%) produce the highest total revenue and healthy margins.  
+- **Promotional events justify deeper discounts.** Outside these periods, aggressive discounting reduces profitability.  
+- **Data-driven monitoring is critical.** Tracking revenue, units sold, and profit ensures pricing decisions maximize financial outcomes.  
+- **Strategic segmentation works.** Discount levels should vary by category and event to optimize results across the catalog.
+
+> By applying these strategies, businesses can maximize revenue, maintain pricing integrity, and make informed, data-driven pricing decisions.
  
 ---
 
