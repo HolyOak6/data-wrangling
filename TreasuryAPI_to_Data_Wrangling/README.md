@@ -1,34 +1,68 @@
 # U.S. Treasury Cash Balance ETL
 
-## Overview
-This project fetches operating cash balance data from the U.S. Treasury via the Fiscal Data API and processes it for analysis. The script performs ETL (Extract, Transform, Load) operations to clean, structure, and visualize Treasury account activity over time.
+## Project Objective
+This project extracts, transforms, and loads U.S. Treasury operating cash balance data from the Fiscal Data API to prepare it for analysis and visualization.  
 
-## Features
-- Fetch data from the Fiscal Data API using `requests`  
-- Clean and transform the dataset using `pandas`  
-- Calculate daily changes and percent changes in account balances  
-- Resample data to compute weekly averages for trend analysis  
-- Plot daily changes by account type and weekly average balances  
-- Save processed data to CSV for further analysis
+The goal is to provide actionable insights into account activity trends over time, supporting financial analysis and reporting.
+
+---
 
 ## Data Source
-- Fiscal Data API: U.S. Treasury operating cash balance endpoint
+- **Fiscal Data API** — U.S. Treasury operating cash balance endpoint  
+- Contains daily records of cash balances by account type
 
-## Key Steps
-1. Load data from the API  
-2. Set a MultiIndex (`record_date`, `account_type`) for easier slicing and grouping  
-3. Remove unnecessary or redundant columns (`src_line_nbr`, `record_calendar_month`, etc.)  
-4. Convert `record_date` to datetime and set as index for time-based operations  
-5. Calculate daily changes and percent changes for account activity  
-6. Resample data weekly to compute average balances  
-7. Visualize trends with line plots for weekly averages and daily changes by account type  
-8. Save the cleaned dataset to CSV
+---
+
+## ETL Process Overview
+
+The project performs the following steps:
+
+1. **Extract**  
+   - Fetch data from the Fiscal Data API using Python's `requests` library
+
+2. **Transform**  
+   - Remove redundant/unnecessary columns (`src_line_nbr`, `record_calendar_month`, etc.)  
+   - Convert `record_date` to datetime and set as index  
+   - Set MultiIndex (`record_date`, `account_type`) for easier grouping and slicing  
+   - Calculate daily changes and percent changes in account balances  
+   - Resample data weekly to compute average balances
+
+3. **Load**  
+   - Save cleaned, processed dataset to CSV for further analysis or visualization
+
+---
+
+## Analysis & Visualization
+
+- Plotted **daily changes by account type** to identify volatility patterns  
+- Plotted **weekly average balances** to highlight trends over time  
+- Enables insights into account-specific trends and Treasury cash flow behavior
+
+---
+
+## Key Skills Demonstrated
+
+- API data extraction using Python (`requests`)  
+- Data cleaning and transformation using pandas  
+- Time series manipulation and resampling  
+- Calculation of derived metrics (daily changes, percent changes)  
+- Visualization with `matplotlib`  
+- ETL workflow and reproducible data processing
+
+---
 
 ## Requirements
+
 - Python 3.x  
 - pandas  
 - requests  
 - matplotlib  
+- All dependencies listed in `requirements.txt`
 
-Dependencies are listed in `requirements.txt`.
+---
 
+## Project Files
+
+- `treasury_etl.py` — Python script performing ETL operations  
+- Processed CSV outputs for cleaned and aggregated Treasury data  
+- Visualizations (PNG or notebook output) showing trends over time
