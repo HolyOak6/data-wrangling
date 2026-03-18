@@ -137,6 +137,35 @@ While these constraints limit some analyses (such as daily sales patterns or rea
 
 ---
 
+## 🔹 Recommendations
+
+Based on the analysis of discount levels, sales volume, and revenue performance, the following strategies are recommended for e-commerce pricing:
+
+### 1. Adopt a Moderate Discount Strategy (10–25%) by Default
+- Mid-range discounts consistently produce the highest overall revenue.  
+- Balances per-unit price with increased sales volume, protecting profit margins while stimulating demand.  
+
+### 2. Reserve Deep Discounts (30%+) for Promotional Events or Inventory Clearance
+- Aggressive discounts drive higher sales volume but reduce per-unit revenue.  
+- Use during festivals, seasonal promotions, or to reduce excess inventory without eroding long-term pricing power.  
+
+### 3. Segment Discount Strategy by Product Category and Sales Event
+- High-demand categories may tolerate slightly higher discounts.  
+- Low-demand or premium categories benefit from moderate or no discount to maintain perceived value.  
+
+### 4. Monitor Revenue and Profit Metrics Continuously
+- While mid-range discounts optimize revenue, ongoing measurement of profit per unit is critical.  
+- Adjust strategies dynamically based on inventory, market conditions, and customer response.  
+
+### 5. Leverage Promotions Strategically
+- Festivals or special events can justify deeper discounts, maximizing purchasing activity without compromising overall revenue.  
+- Avoid blanket deep discounting outside of high-demand periods.  
+
+**Summary:**  
+ Focus on moderate, data-driven discounting while using deep discounts selectively to drive short-term volume or manage inventory. This approach maximizes revenue potential while maintaining pricing integrity and long-term profitability.
+
+---
+
 ## Tools Used
 
 - SQL (SQLite)
