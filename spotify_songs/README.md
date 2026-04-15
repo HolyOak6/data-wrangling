@@ -72,7 +72,7 @@ USE new_schema;
 
 3. Modify the queries to explore additional insights or answer specific questions about artists, songs, or labels.
 
-##Notes
+## Notes
 
 This project is intended as a junior-level portfolio piece demonstrating SQL data analysis skills.
 
