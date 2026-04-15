@@ -24,15 +24,13 @@ All dependencies are listed in `requirements.txt`.
 Clone the repository
 Install dependencies
 
-
-#pip install -r requirements.txt
+# pip install -r requirements.txt
 Open the Jupyter Notebook and run all cells:
 
-
-#jupyter notebook
+# jupyter notebook
 Review the plots and exported Excel file for insights.
 
-#Notes
+# Notes
 Make sure the JSON dataset is in the correct folder before running the notebook.
 
-#All plots are saved automatically in PNG format.
+# All plots are saved automatically in PNG format.
