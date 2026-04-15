@@ -1,0 +1,230 @@
+---
+title: "HR Attrition Analysis"
+author: "Michael Holyoak"
+date: "2026-04-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+library(ggplot2)
+```
+## Context
+
+This analysis uses the IBM HR Analytics Employee Attrition & Performance dataset uploaded to Kaggle by pavansubhash [link](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/data).
+
+It contains employee profile information, demographics, satisfaction survey results, compensation, and attrition outcomes.
+
+## Objective
+The objective of this analysis is to identify the key factors associated with employee attrition within the organization. Specifically, it examines how job-related characteristics, employee engagement, and compensation rates relate to whether or not an employee leaves the company. The analysis also explores how combinations of these factors interact to influence attrition rates.
+
+## Data Loading
+```{r data-loading}
+df <- read.csv("HR-Employee-Attrition.csv")
+dim(df) #confirm dataset size
+```
+## Data Inspection
+```{r data-inspection, results="hide"}
+colSums(is.na(df))
+str(df)
+summary(df)
+```
+## Data Exploration
+This section examines key categorical variables associated with employee attrition.
+```{r we-attrition}
+# Work environment satisfaction vs attrition
+prop.table(table(df$EnvironmentSatisfaction, df$Attrition), 1)
+```
+Lower environment satisfaction is associated with higher attrition, with the lowest satisfaction group showing the highest turnover rate. Attrition decreases consistently as satisfaction levels improve.
+```{r ji-attrition}
+# Job involvement vs attrition
+prop.table(table(df$JobInvolvement, df$Attrition), 1)
+```
+Higher job involvement is associated with lower attrition. Employees with the lowest involvement show the highest attrition rate (~34%), while those with the highest involvement show the lowest attrition (~9%). This indicates a strong inverse relationship between job involvement and employee turnover.
+```{r jr-attrition}
+# Job role vs attrition
+prop.table(table(df$JobRole, df$Attrition), 1)
+```
+Attrition varies significantly by job role. Sales Representatives show the highest attrition rate (~40%), followed by Laboratory Technicians and Human Resources roles. In contrast, Research Directors, Managers, and Healthcare Representatives show the lowest attrition rates, indicating strong variation in turnover risk across different job functions.
+```{r js-attrition}
+# Job satisfaction vs attrition
+prop.table(table(df$JobSatisfaction, df$Attrition), 1)
+```
+Job satisfaction shows a weak inverse relationship with attrition. Employees with the lowest satisfaction (level 1) have the highest attrition rate (~23%), while higher satisfaction levels show slightly lower attrition (~11–17%). However, the differences across levels are not large, suggesting job satisfaction has a weaker effect on attrition compared to variables like job involvement or overtime.
+```{r ot-attrition}
+# Overtime vs attrition
+prop.table(table(df$OverTime, df$Attrition), 1)
+```
+Employees who work overtime show a significantly higher attrition rate (~30%) compared to those who do not (~10%). This indicates a strong positive relationship between overtime work and employee turnover, suggesting workload intensity is a major factor associated with attrition.
+```{r wlb-attrition}
+# Work life balance vs attrition
+prop.table(table(df$WorkLifeBalance, df$Attrition), 1)
+```
+Work-life balance shows a non-linear relationship with attrition. Employees reporting the poorest work-life balance (level 1) have the highest attrition rate (~31%). However, the pattern is less consistent at higher levels, with levels 2 and 3 showing lower attrition (~17% and ~14%), while level 4 shows a slight increase (~18%). This suggests work-life balance is associated with attrition, but the relationship is not strictly linear.
+
+## Feature Engineering
+MonthlyIncome is continuous and difficult to interpret directly in attrition analysis.
+To improve interpretability, we create income groups.
+```{r feature-engineering}
+df$IncomeGroup <- cut(
+  df$MonthlyIncome,
+  breaks = c(0, 3000, 6000, 10000, Inf),
+  labels = c("Low", "Mid", "High", "Very High")
+)
+
+prop.table(table(df$IncomeGroup, df$Attrition), 1)
+```
+Attrition decreases as income level increases. Employees in the lowest income group show the highest attrition rate (~29%), while those in the very high income group show the lowest (~9%). This indicates a clear inverse relationship between compensation level and employee turnover, with lower-paid employees being more likely to leave the organization.
+
+## Visualizing Strong Predictors of Attrition 
+This section visualizes key predictors of attrition to highlight patterns across overtime, job role, job involvement, and income level.
+
+### OverTime vs Attrition
+```{r visualize-overtime}
+ggplot(df, aes(x = OverTime, fill = Attrition)) +
+  geom_bar(position = "fill")
+```
+
+### JobInvolvement vs Attrition
+
+```{r visualize-job-involvement}
+ggplot(df, aes(x = JobInvolvement, fill = Attrition)) +
+  geom_bar(position = "fill")
+```
+
+### JobRole vs Attrition
+
+```{r visualize-job-role}
+ggplot(df, aes(x = JobRole, fill = Attrition)) +
+  geom_bar(position = "fill") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+### IncomeGroup vs Attrition
+
+```{r visualize-income-group}
+ggplot(df, aes(x = IncomeGroup, fill = Attrition)) +
+  geom_bar(position = "fill")
+```
+
+## Interaction Analysis
+This section examines how multiple factors interact to influence employee attrition rates.
+```{r interaction-inc-ot}
+# Income + Overtime interaction
+# Tests whether low income combined with overtime increases attrition risk
+prop.table(table(df$IncomeGroup, df$OverTime, df$Attrition), c(1,2))
+```
+Income and overtime together show a compounding effect on attrition. Employees in the lowest income group who also work overtime exhibit the highest attrition rates, while higher income groups show progressively lower attrition under both overtime and non-overtime conditions. However, within every income group, employees working overtime consistently show higher attrition than those who do not, indicating that overtime increases attrition risk regardless of income level.
+```{r interaction-inc-jr}
+# Income + Job Role interaction
+# Tests whether job role effects are driven by income differences
+prop.table(table(df$IncomeGroup, df$JobRole, df$Attrition), c(1,2))
+```
+Income differences do not fully explain attrition patterns across job roles. While higher income groups generally show lower attrition within most roles, certain roles—such as Sales Representative and Laboratory Technician—still exhibit relatively high attrition even when income levels are higher. This suggests that job role itself continues to show distinct attrition patterns across income levels.
+```{r interaction-inc-ji}
+# Income + Job Involvement interaction
+# Tests relationship between compensation and engagement
+prop.table(table(df$IncomeGroup, df$JobInvolvement, df$Attrition), c(1,2))
+```
+Income and job involvement jointly influence attrition risk. Across all income groups, lower job involvement is consistently associated with higher attrition rates, with the highest turnover occurring at the lowest involvement level (level 1). While higher income groups generally show lower attrition, the pattern of reduced attrition with increasing job involvement remains consistent across all income levels. This suggests that job involvement is a strong protective factor against attrition, independent of compensation.
+
+```{r interaction-ot-ji}
+# Overtime + Job Involvement interaction
+# Tests whether engagement mitigates the effect of overtime
+prop.table(table(df$OverTime, df$JobInvolvement, df$Attrition), c(1,2))
+```
+Overtime and job involvement jointly affect attrition risk. Employees working overtime show higher attrition rates across all levels of job involvement compared to those not working overtime. Additionally, within both overtime and non-overtime groups, higher job involvement is associated with lower attrition. The highest attrition occurs among employees with low job involvement who also work overtime, suggesting a compounding effect between workload and engagement.
+
+## Visualization of Interactions
+This section visualizes how combinations of factors interact to influence attrition rates across different employee groups.
+```{r income-overtime-visualization}
+# Visualize interaction between income level and overtime on attrition rates
+# Purpose: Determine whether overtime amplifies attrition risk across income groups
+# Insight focus: Tests whether compensation buffers the effect of workload strain
+
+summary_df <- df %>%
+  group_by(IncomeGroup, OverTime) %>%
+  summarise(
+    attrition_rate = mean(Attrition == "Yes", na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(summary_df, aes(x = IncomeGroup, y = attrition_rate, color = OverTime, group = OverTime)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Attrition Rate by Income and Overtime",
+    y = "Attrition Rate"
+  )
+```
+```{r income-role-visualization}
+# Analyze whether job role differences in attrition persist across income levels
+# Purpose: Determine if job role effects are independent of compensation differences
+# Insight focus: Tests whether certain roles have inherent attrition risk beyond pay
+
+ggplot(df, aes(x = JobRole, fill = Attrition)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~IncomeGroup) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(
+    title = "Attrition by Job Role and Income Group",
+    x = "Job Role",
+    y = "Proportion"
+  )
+```
+```{r involvement-income-visualization}
+# Analyze interaction between income level and job involvement on attrition
+# Purpose: Determine whether engagement levels modify the relationship between compensation and turnover
+# Insight focus: Tests whether low income combined with low involvement creates compounding attrition risk
+
+ggplot(df, aes(x = factor(JobInvolvement), fill = Attrition)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~IncomeGroup) +
+  labs(
+    title = "Attrition by Job Involvement and Income Group",
+    x = "Job Involvement Level",
+    y = "Proportion"
+  )
+```
+```{r involvement-overtime-visualization}
+# Analyze how job involvement interacts with overtime in influencing attrition
+# Purpose: Test whether employee engagement reduces the impact of overtime on turnover
+# Insight focus: Identifies whether high engagement protects against burnout effects
+
+ggplot(df, aes(x = factor(JobInvolvement), fill = Attrition)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~OverTime) +
+  labs(
+    title = "Attrition by Job Involvement and Overtime",
+    x = "Job Involvement Level",
+    y = "Proportion"
+  )
+```
+
+## Key Findings
+* Employees working overtime show a higher attrition rate compared to those who do not work overtime.
+* Lower income groups consistently experience higher attrition compared to higher income groups.
+* Sales Representative roles show noticeably higher attrition compared to most other job roles.
+* Lower job involvement is associated with higher attrition rates, especially within lower income groups.
+* Attrition patterns by job role remain visible even when accounting for income differences, suggesting role-specific effects.
+* Employees with low engagement combined with overtime exposure show increased attrition risk compared to high-engagement employees.
+
+## Recommendations
+* Reduce or better manage overtime exposure, particularly in roles where attrition is highest, to lower burnout-related turnover.
+* Review compensation structures for lower income groups to improve retention and reduce pay-driven attrition.
+* Prioritize retention efforts in high-attrition job roles such as Sales Representative, where turnover is consistently elevated.
+* Strengthen employee engagement initiatives aimed at improving job involvement, especially for employees showing lower involvement levels.
+* Target retention interventions toward employees experiencing multiple risk factors simultaneously, such as low income combined with overtime.
+* Investigate role-specific conditions contributing to persistent attrition differences, even after accounting for compensation levels.
+
+## Conclusion
+
+This analysis looked at employee turnover to understand what factors are most connected to whether people leave the company.
+
+The results show that employees working overtime and those with lower pay are more likely to leave. Lower job involvement also stands out as a strong factor linked to higher turnover, while job satisfaction and work-life balance show weaker or less consistent effects.
+
+When looking at combinations of factors, the risk of leaving is highest for employees who are dealing with more than one pressure at the same time, such as lower pay combined with overtime, or low job involvement combined with overtime. This suggests that turnover is not driven by a single issue, but by overlapping conditions.
+
+Overall, the main drivers of attrition in this dataset appear to be workload, compensation, and engagement, especially when they occur together.
