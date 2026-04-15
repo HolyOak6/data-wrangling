@@ -18,7 +18,7 @@ Welcome to my data wrangling portfolio! This repository showcases my ability to 
   - Found that employees exposed to multiple risk factors (low income + overtime + low involvement) had the highest attrition rates
   - Produced a fully structured R Markdown report with clear insights, visualizations, and business-focused recommendations
 
-### 2. E-Commerce Discount Strategy Analysis
+### 2. E-Commerce Discount Strategy Analysis (SQL, Tableau)
 - **Description:** Investigated how discount levels influence revenue, pricing, and sales volume in an e-commerce dataset. The project combined SQL analysis with an interactive Tableau dashboard to evaluate the trade-offs between higher discounts and revenue performance.
 - **Key Skills:** SQL aggregations, `CASE` statements for discount binning, grouping and summarization, business metric analysis, and data visualization with Tableau.
 - **Highlights:**
