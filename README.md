@@ -11,12 +11,12 @@ Welcome to my data wrangling portfolio! This repository showcases my ability to 
 - **Description:** Analyzed employee attrition using the IBM HR Analytics dataset in R, focusing on identifying key factors that contribute to employee turnover. The project combines exploratory data analysis, feature engineering, and interaction analysis to uncover patterns in attrition behavior.
 - **Key Skills:** R, dplyr, ggplot2, data wrangling, feature engineering, grouped analysis, data visualization, interpreting categorical relationships, R Markdown reporting
 - **Highlights:**
-  -Analyzed relationships between attrition and factors such as overtime, income level, job involvement, and job role
-  -Created income group categories to improve interpretability of salary data
-  -Identified strong drivers of attrition, including overtime and low job involvement
-  -Explored interaction effects (e.g., income + overtime, involvement + overtime) to uncover compounding risk factors
-  -Found that employees exposed to multiple risk factors (low income + overtime + low involvement) had the highest attrition rates
-  -Produced a fully structured R Markdown report with clear insights, visualizations, and business-focused recommendations
+  - Analyzed relationships between attrition and factors such as overtime, income level, job involvement, and job role
+  - Created income group categories to improve interpretability of salary data
+  - Identified strong drivers of attrition, including overtime and low job involvement
+  - Explored interaction effects (e.g., income + overtime, involvement + overtime) to uncover compounding risk factors
+  - Found that employees exposed to multiple risk factors (low income + overtime + low involvement) had the highest attrition rates
+  - Produced a fully structured R Markdown report with clear insights, visualizations, and business-focused recommendations
 
 ### 2. E-Commerce Discount Strategy Analysis
 - **Description:** Investigated how discount levels influence revenue, pricing, and sales volume in an e-commerce dataset. The project combined SQL analysis with an interactive Tableau dashboard to evaluate the trade-offs between higher discounts and revenue performance.
